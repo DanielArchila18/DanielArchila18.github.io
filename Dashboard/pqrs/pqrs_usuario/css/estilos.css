@@ -1,0 +1,243 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+
+.adjunta-fac,.mensaje{
+
+	font-weight: 700;
+}
+.formulario{
+
+	display: grid;
+	/*2 columnas*/
+	grid-template-columns:1fr 1fr; 
+	/*espacio entre cada elemento*/
+	gap:20px; 
+}
+
+.formulario__label{
+     /*abarcar 100%*/
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input{
+
+	position: relative;
+}
+
+.formulario__input{
+
+	width: 100%;
+	background:white;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition:.3s ease all;  
+}
+
+.añadir{
+
+	width: 100%;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 35px;
+
+	transition:.3s ease all;  
+}
+
+textarea{
+
+	width: 100%;
+	background:white;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 180px;
+	padding: 0 40px 0 10px;
+	transition:.3s ease all;  
+	font-weight: bold;
+}
+
+.formulario__comentario:focus{
+
+	border: 3px solid blue;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario__input:focus{
+
+	border: 3px solid blue;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario__input-error{
+
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+
+/* "activo "cuando el error del input este activo se muestre el mensaje oculto */
+.formulario__input-error-activo{
+
+	display: block;
+}
+  /*-------------el icono-----------*/
+.formulario__validacion-estado{
+
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	/*mostrarse cuando alla un error*/
+	opacity: 0;
+}
+
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+	grid-column: span 2;
+}
+
+.formulario__comentario,.mensaje,.adjunta-fac,.formulario__grup{
+	grid-column: span 2;
+}
+
+
+.titulo,.añadir{
+
+	grid-column: span 2;
+}
+
+.titulo{
+	height: 45px;
+	line-height: 45px;
+	background-image: linear-gradient(8deg , #1828DC , #3a0ca3);
+	padding: 0 15px;
+	border-radius: 3px;
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+
+}
+
+.formulario__mensaje{
+
+	height: 45px;
+	line-height: 45px;
+    background-image: linear-gradient(8deg , #F73A2B , #DC2411);
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+
+}
+
+.formulario__mensaje-activo{
+
+	display: block;
+}
+.formulario__mensaje p{
+	margin: 0;
+
+}
+
+.formulario__grupo-btn-enviar{
+
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+}
+
+.formulario__btn{
+	height: 45px;
+	line-height: 45px;
+	width: 100%;
+	background-image: linear-gradient(8deg , #1828DC, #3a0ca3);
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1 ease all;
+}
+
+.formulario__btn:hover{
+
+	box-shadow: 3px 0px 30px rgba(163,163,163,0.1);
+}
+
+
+.formulario__mensaje-exito{
+
+	font-size: 14px;
+	color: green;
+	display: none;
+
+}
+
+.formulario__mensaje-exito-activo{
+
+	display: block;
+}
+
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+color: #45EC45;
+opacity:1;
+
+}
+
+.formulario__grupo-incorrecto .formulario__label{
+color: #DE2B12;
+
+
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+color: #DE2B12;
+opacity:1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+border: 3px solid #DE2B12;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+/*quiero acceder al media, quiero q sea de pantalla con un ancho maximo (max-width) de 800
+lo q quiero hacer es acceder al formulario */
+@media screen and (max-width: 800px){
+.formulario{
+grid-template-columns: 1fr;
+
+}
+
+.formulario__mensaje,
+.formulario__grupo-btn-enviar,.titulo,.formulario__comentario,.adjunta-fac,.mensaje,.añadir,.formulario__grup{
+	grid-column: 1;
+}
+
+}

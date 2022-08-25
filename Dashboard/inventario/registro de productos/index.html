@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<!-- enlace de iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<!--  enlaces Normalize -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- Fuente de google fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!--estilos css  -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<!-- class para acceder css....  id para acceder js -->
+		<!-- const formulario = document.getElementById('formulario') para acceder a este formulario -->
+		<form action="" class="formulario" id="formulario">
+
+			<div class="titulo">REGISTRO PRODUCTOS</div>
+
+            <!-- Tipo de proveedor-->
+			<div class="formulario__grupo" id="grupo__tipop">
+				<label for="tipop" class="formulario__label">Tipo de proveedor </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="tipop" id="tipop" >
+					    <option value="1">Seleccione</option>
+					   <option value="1">Fabricante</option>
+					   <option value="1">Distribuidor</option>
+					   <option value="1">Proveedor Nacional</option>
+					   <option value="1">Proveedor Extranjero</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+			<!-- producto -->
+			<div class="formulario__grupo  " id="grupo__producto">
+				<label for="producto" class="formulario__label">Producto</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="producto" id="producto" placeholder="Nombre del producto">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo producto solo puede contener letras.</p>	
+			</div>
+
+
+				<!-- precio -->
+			<div class="formulario__grupo" id="grupo__precio">
+				<label for="precio" class="formulario__label">Precio </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="precio" id="precio" placeholder="Precio del producto">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo precio no puede contener simbolos ni letras. </p>	
+			</div>
+
+
+				<!-- cantidad -->
+			<div class="formulario__grupo" id="grupo__cantidad">
+				<label for="cantidad" class="formulario__label">Cantidad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="cantidad" id="cantidad" placeholder="Cantidad del producto">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo cantidad no puede contener simbolos ni letras.</p>	
+			</div>
+
+
+
+			<!------------------------------mensaje de error y boton--------------------------------->
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: </b> Por favor complete el formulario correctamente </p>
+
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" >
+				<button type="submit" class="formulario__btn">GUARDAR</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado-exitosamente!</p>
+
+			</div>
+
+
+
+
+		</form>
+	</main>
+
+
+    <!--Archivo de formulario js  -->
+	<script src="js/formulario.js"></script>
+	
+</body>
+</html>

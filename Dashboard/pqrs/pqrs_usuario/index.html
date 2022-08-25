@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<!-- enlace de iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<!--  enlaces Normalize -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- Fuente de google fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!--estilos css  -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<!-- class para acceder css....  id para acceder js -->
+		<!-- const formulario = document.getElementById('formulario') para acceder a este formulario -->
+		<form action="" class="formulario" id="formulario">
+
+			<div class="titulo">PQRS</div>
+
+
+           <!-- Nombres -->
+			<div class="formulario__grupo  " id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre y apellidos">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo Nombre solo puede contener letras.</p>	
+			</div>
+
+			 <!-- documento -->
+			<div class="formulario__grupo  " id="grupo__documento">
+				<label for="documento" class="formulario__label">Documento</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="documento" id="documento" placeholder="1000157645">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo documento solo puede llevar digitos, sin puntos ni comas.</p>	
+			</div>
+
+			 <!-- Telefono  -->
+			<div class="formulario__grupo  " id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Telefono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3252678534">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo Telefono solo contiene digitos.</p>	
+			</div>
+
+			<!-- correo  -->
+			<div class="formulario__grupo  " id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="correo" id="correo" placeholder="felipe@gmail.com">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo Correo no puede contener simbolos .</p>	
+			</div>
+
+
+
+            <!-- Tipo de solicitud-->
+			<div class="formulario__grup" id="grupo__solicitud">
+				<label for="solicitud" class="formulario__label">Tipo de Solicitud </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="solicitud" id="solicitud" >
+					    <option value="1">Seleccione tipo de solicitud</option>
+					   <option value="1">Queja</option>
+					   <option value="1">Reclamo</option>
+					   <option value="1">Información</option>
+					   <option value="1">Pregunta</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+			<p class="mensaje">Escriba en el siguiente recuadro su pregunta, queja o reclamo</p>
+             
+
+
+			<!-- Descripcion-->
+
+			<div class="formulario__comentario  " id="grupo__descripcion">
+			
+					<textarea name="descripcion" id="descripcion" class="formulario__descripcion" rows="10" cols="40" placeholder="Escribe aquí tu situación"></textarea>
+				       
+				<p class="formulario__input-error">El campo debe tener la descripcion de la situacion.</p>	
+			</div>
+
+             
+
+             <!-- producto -->
+
+             <p class="adjunta-fac">Adjunte factura de compra(opcional)</p> 
+		      <input type="file" class="añadir" id="factura" >
+		      <p class="formulario__input-error">Debe adjuntar la factura.</p>	
+
+
+
+
+             
+             
+
+			<!------------------------------mensaje de error y boton--------------------------------->
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: </b> Por favor complete el formulario correctamente </p>
+
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" >
+				<button type="submit" class="formulario__btn">ENVIAR SOLICITUD</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado-exitosamente!</p>
+
+			</div>
+
+
+
+
+		</form>
+	</main>
+
+
+    <!--Archivo de formulario js  -->
+	<script src="js/formulario.js"></script>
+	
+</body>
+</html>

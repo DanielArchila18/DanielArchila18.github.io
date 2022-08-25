@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Niramit:wght@300&family=Viga&display=swap" rel="stylesheet">
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<a href="principal.html" target="principal"></a>
+	
+	<div class="container">
+		<div class="navegacion">
+		<ul>
+			<li>
+				<a href="#">
+				<span class="icon"><img src="img/2.png"></span>
+				<span class="titulo"><h2>Usuario</h2></span>
+				</a>
+			</li>
+			<li>
+				<a href="../../Dashboard/usuario_Dashboard/index.html" target="principal">
+				<span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
+				<span class="titulo">Compras</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-regular fa-message"></i></span>
+				<span class="titulo">Pqrs</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-regular fa-circle-question"></i></span>
+				<span class="titulo">Ayuda</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-gear"></i></span>
+				<span class="titulo">Ajustes</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-lock"></i></span>
+				<span class="titulo">Contraseña</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+				<span class="titulo">Cerrar sesion</span>
+				</a>
+			</li>
+		</ul>
+		
+		</div>
+
+		<div class="main">
+			<div class="tobar">
+			  <div class="toggle" onclick="toggleMenu();"></div>
+			  <div class="buscar">
+			  	<label>
+			  		<input type="text" placeholder="buscar aqui">
+			  		<i class="fa fa-solid fa-magnifying-glass"></i>
+			  	</label>
+			  </div>
+			  <div class="usuario">
+			  		<img src="img/1.png">
+			  	</div>
+			</div>
+
+
+
+			<div class="carbox">
+				<div class="card">
+					<div >
+						<img src="img/11.png">
+					</div>
+					
+				</div>
+
+				<div class="card">
+					
+					<div>
+						<img src="img/12.png">
+					</div>
+					
+				</div>
+
+				<div class="card">
+					<div>
+						<img src="img/13.png">
+					</div>
+					
+				</div>
+
+				<div class="card">
+					<div>
+						<img src="img/14.png">
+					</div>
+					
+				</div>
+			</div>
+
+
+
+			<div class="details">
+				<div class="recentOrders">
+					<div class="CardHeader">
+						<h2>Compras</h2>
+						<a href="#" class="btn">Ver Todo</a>
+					</div>
+
+					<table>
+						<thead>
+							<tr>
+								<td>Tipo</td>
+								<td>Precio</td>
+								<td>Color</td>
+								<td>Talla</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>camisa</td>
+								<td>$12.000</td>
+								<td>rojo</td>
+								<td>S</td>
+							</tr>
+							<tr>
+								<td>Pantalones</td>
+								<td>$60.000</td>
+								<td>Azul</td>
+								<td>L</td>
+							</tr>
+							<tr>
+								<td>zapatos</td>
+								<td>$120.000</td>
+								<td>Blancos</td>
+								<td>XS</td>								
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Cafe</td>
+								<td>M</td>								
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Negro</td>
+								<td>L</td>
+						 	</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>verde</td>
+								<td>S</td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>rosado</td>
+								<td>XS</td>
+							</tr>
+								<tr>
+								<td>zapatos</td>
+								<td>$120.000</td>
+								<td>Negros</td>
+								<td>XL</td>
+								</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Amarillo</td>
+								<td>M</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			    <div class="recentCustumers">
+					<div class="CardHeader">
+						<h2>Productos</h2>
+						<!-- <a href="#">Ver Todo</a> -->
+					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/3.png"></div></td>
+								<td><h4>JEANS<br><span>$ 69.999</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/4.png"></div></td>
+								<td><h4>POLOS<br><span>$ 29.999</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/7.png"></div></td>
+								<td><h4>SACOS<br><span>$ 90.999</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/9.png"></div></td>
+								<td><h4>TENIS<br><span>$ 120.000</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/6.png"></div></td>
+								<td><h4>SUDADERAS<br><span>$ 39.999</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/7.png"></div></td>
+								<td><h4>SACOS<br><span>$ 90.999</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/3.png"></div></td>
+								<td><h4>JEANS<br><span>$ 69.999</span></h4></td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+	<script>
+		function toggleMenu(){
+	let toggle = document.querySelector('.toggle');
+	let navegacion = document.querySelector('.navegacion');
+	let main = document.querySelector('.main');
+	toggle.classList.toggle('active');
+	navegacion.classList.toggle('active');
+	main.classList.toggle('active');
+}
+	</script>
+</body>
+</html>

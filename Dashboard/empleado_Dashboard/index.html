@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Niramit:wght@300&family=Viga&display=swap" rel="stylesheet">
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<div class="container">
+		<div class="navegacion">
+		<ul>
+			<li>
+				<a href="#">
+				<span class="icon"><img src="img/2.png"></span>
+				<span class="titulo"><h2>EMPLEADO</h2></span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-house"></i></span>
+				<span class="titulo">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
+				<span class="titulo">Ventas</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-regular fa-message"></i></span>
+				<span class="titulo">Pqrs</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+				<span class="titulo">Domicilio</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-regular fa-circle-question"></i></span>
+				<span class="titulo">Ayuda</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-gear"></i></span>
+				<span class="titulo">Ajustes</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-lock"></i></span>
+				<span class="titulo">Contraseña</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+				<span class="titulo">Cerrar sesion</span>
+				</a>
+			</li>
+		</ul>	
+		</div>
+
+		<div class="main">
+			<div class="tobar">
+			  <div class="toggle" onclick="toggleMenu();"></div>
+			  <div class="buscar">
+			  	<label>
+			  		<input type="text" placeholder="buscar aqui">
+			  		<i class="fa fa-solid fa-magnifying-glass"></i>
+			  	</label>
+			  </div>
+			  <div class="usuario">
+			  		<img src="img/1.png">
+			  	</div>
+			</div>
+
+
+
+			<div class="carbox">
+				<div class="card">
+					<div>
+						<div class="numbers">23</div>
+						<div class="cardName">Domicilios Hechos</div>
+					</div>
+					<div class="iconBox">
+						<i class="fa-solid fa-location-dot"></i>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">82</div>
+						<div class="cardName">Ventas</div>
+					</div>
+					<div class="iconBox">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">20</div>
+						<div class="cardName">PQRS</div>
+					</div>
+					<div class="iconBox">
+						<i class="fa-regular fa-comments"></i>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">$ 70.134</div>
+						<div class="cardName ">Ganancias</div>
+					</div>
+					<div class="iconBox">
+						<i class="fa-solid fa-dollar-sign"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="details">
+				<div class="recentOrders">
+					<div class="CardHeader">
+						<h2>Domicilios</h2>
+						<a href="#" class="btn">Ver Todo</a>
+					</div>
+
+					<table>
+						<thead>
+							<tr>
+								<td>Tipo</td>
+								<td>Precio</td>
+								<td>Dirección</td>
+								<td>Estado</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>camisa</td>
+								<td>$12.000</td>
+								<td>Cra. 9 ##11-37</td>
+								<td><span class="estado entre">Finalizado</span></td>
+							</tr>
+							<tr>
+								<td>Pantalos</td>
+								<td>$60.000</td>
+								<td>Cl. 2 ##12-56</td>
+								<td><span class="estado pendi">Proceso</span></td>
+							</tr>
+							<tr>
+								<td>zapatos</td>
+								<td>$120.000</td>
+								<td>Cra. 7 ##71-89</td>
+								<td><span class="estado entre">Finalizado</span></td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Cl. 4 ##55-17</td>
+								<td><span class="estado cancel">Cancelado</span></td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Cra. 2 ##11-58</td>
+								<td><span class="estado pendi">Proceso</span></td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Cra. 3 #01-3</td>
+								<td><span class="estado entre">Finalizado</span></td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Kra 78A 13 sur</td>
+								<td><span class="estado cancel">Cancelados</span></td>
+							</tr>
+								<tr>
+								<td>zapatos</td>
+								<td>$120.000</td>
+								<td>Kra 78A 13 su</td>
+								<td><span class="estado pendi">Proceso</span></td>
+							</tr>
+							<tr>
+								<td>Buso</td>
+								<td>$40.000</td>
+								<td>Cl. 38A Sur #34-51</td>
+								<td><span class="estado entre">Finalizado</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			    <div class="recentCustumers">
+					<div class="CardHeader">
+						<h2>PQRS PENDIENTES</h2>
+						<!-- <a href="#">Ver Todo</a> -->
+					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/3.png"></div></td>
+								<td><h4>MARIA CARMEN<br><span>Queja</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/4.png"></div></td>
+								<td><h4>XIMENA GARCIA<br><span>Reclamo</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/7.png"></div></td>
+								<td><h4>JUAN LOPEZ<br><span>Información</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/9.png"></div></td>
+								<td><h4>MARCELA DIAZ<br><span>Pregunta</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/6.png"></div></td>
+								<td><h4>DANIEL GUTIERREZ<br><span>Reclamo</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/7.png"></div></td>
+								<td><h4>SANTIAGO PEÑA<br><span>Pregunta</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><img src="img/3.png"></div></td>
+								<td><h4>SOFIA MARTINEZ<br><span>Queja</span></h4></td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+    
+		</div>
+	</div>
+	
+	<script>
+		function toggleMenu(){
+	let toggle = document.querySelector('.toggle');
+	let navegacion = document.querySelector('.navegacion');
+	let main = document.querySelector('.main');
+	toggle.classList.toggle('active');
+	navegacion.classList.toggle('active');
+	main.classList.toggle('active');
+}
+	</script>
+</body>
+</html>

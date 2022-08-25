@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<!-- enlace de iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<!--  enlaces Normalize -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- Fuente de google fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!--estilos css  -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<!-- class para acceder css....  id para acceder js -->
+		<!-- const formulario = document.getElementById('formulario') para acceder a este formulario -->
+		<form action="" class="formulario" id="formulario">
+
+
+			<div class="titulo">REGISTRO DE PROVEEDORES</div>
+
+			<!-- Nombre de la Empresa -->
+			<div class="formulario__grupo  " id="grupo__empresa">
+				<label for="empresa" class="formulario__label">Nombre de la Empresa</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="empresa" id="empresa" placeholder="Empresa">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo Empresa tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion abajo.</p>	
+			</div>
+
+
+				<!-- Nombre del representante -->
+			<div class="formulario__grupo" id="grupo__representante">
+				<label for="representante" class="formulario__label">Nombre del representante </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="representante" id="representante" placeholder="Representante">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Representante no puede contener numeros y simbolos </p>	
+			</div>
+
+
+				<!-- ID_proveedor -->
+			<div class="formulario__grupo" id="grupo__proveedor">
+				<label for="proveedor" class="formulario__label">Id_proveedor </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="proveedor" id="proveedor" placeholder="p1102394">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Id_proveedor solo contiene digitos</p>	
+			</div>
+
+
+				<!-- Direccion -->
+			<div class="formulario__grupo" id="grupo__direccion">
+				<label for="direccion" class="formulario__label">Dirección </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="cra 84 A N 61 a">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo dirección no contiene simbolos.</p>	
+			</div>
+
+
+
+
+				<!-- Tipo de proveedor-->
+			<div class="formulario__grupo" id="grupo__tipop">
+				<label for="tipop" class="formulario__label">Tipo de proveedor </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="tipop" id="tipop" >
+					    <option value="1">Seleccione</option>
+					   <option value="1">Fabricante</option>
+					   <option value="1">Distribuidor</option>
+					   <option value="1">Proveedor Nacional</option>
+					   <option value="1">Proveedor Extranjero</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+				<!-- telefono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Telefono </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3035763847">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo telefono solo contiene numeros.</p>	
+			</div>
+
+			
+
+				
+
+
+
+
+
+			<!------------------------------mensaje de error y boton--------------------------------->
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: </b> Por favor complete el formulario correctamente </p>
+
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" >
+				<button type="submit" class="formulario__btn">GUARDAR</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado-exitosamente!</p>
+
+			</div>
+
+
+
+
+		</form>
+	</main>
+
+
+    <!--Archivo de formulario js  -->
+	<script src="js/formulario.js"></script>
+	
+</body>
+</html>

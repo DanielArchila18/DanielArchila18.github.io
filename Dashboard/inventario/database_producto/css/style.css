@@ -1,0 +1,208 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: monospace;
+}
+
+body{
+
+	overflow-x: hidden;
+}
+
+.container{
+position: relative;
+width: 100%; 
+background:green;
+}
+
+.details{
+
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	padding-top: 20px;
+	grid-template-columns: 2fr 1fr;
+	background: #F5F7FA;
+}
+
+.details .recentOrders{
+position: relative;
+min-height: 400px;
+background:white;
+padding: 20px;
+
+
+}
+
+.CardHeader{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.CardHeader h2{
+
+	font-weight: 500;
+	font-size: 20px;
+	font-family: 'Rubik', sans-serif;
+	color: #5B5C5F;
+}
+
+.btn{
+
+	position: relative;
+	padding: 8px 13px;
+	background:#4FE637; 
+	color : white;
+	text-decoration: none;
+	border-radius: 6px;
+}
+
+.details table{
+
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+
+
+}
+
+.details table thead td{
+font-weight: 600;
+font-family: 'Rubik', sans-serif;
+color: #3D4047 ;
+
+}
+
+.details .recentOrders table tr{
+border-bottom: 1px solid rgba(0,0,0,0.1);
+
+}
+.details .recentOrders table tbody tr:last-child{
+border-bottom: none;
+
+}
+
+.details .recentOrders table tbody tr td{
+font-weight: 300;
+font-family: 'Rubik', sans-serif;
+color: #3D4047 ;
+font-size: 15px;
+}
+.details .recentOrders table tbody tr:hover{
+background: rgba(234, 237, 243);
+color: white;
+
+}
+
+
+.details .recentOrders table tr td{
+padding: 9px 5px;
+
+}
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child{
+text-align:center; 
+}
+
+.details .recentOrders table thead tr td:nth-child(4),
+.details .recentOrders table tbody tr td:nth-child(4){
+text-align:center; 
+
+}
+
+.details .recentOrders table thead tr td:nth-child(5),
+.details .recentOrders table tbody tr td:nth-child(5){
+text-align:center; 
+}
+
+.details .recentOrders table thead tr td:nth-child(6),
+.details .recentOrders table tbody tr td:nth-child(6){
+text-align:center; 
+}
+
+
+
+.icono{
+    position: relative;
+	background:#378FE6;
+	padding: 8px 13px;
+	color: white;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	cursor: pointer;
+
+}
+
+.error{
+    position: relative;
+	background: red;
+	padding: 8px 13px;
+	color: white;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	cursor: pointer;
+
+}
+
+/*pagina responsive*/
+
+@media(max-width: 992px){
+
+	.navegacion{
+
+		left: -300px;
+	}
+	.navegacion.active{
+
+		left: 0;
+		width: 300px;
+	}
+}
+
+@media(max-width: 768px){
+
+	.details{
+
+		grid-template-columns: repeat(1,1fr);
+
+	}
+
+	.CardHeader h2{
+
+	font-weight: 600;
+	font-size: 18px;
+}
+}
+
+@media(max-width: 768px){
+	
+	.details .recentOrders{
+		overflow-x: auto;
+	}
+
+	.details .recentOrders table{
+		width: 600px;
+	}
+	.navegacion{ 
+		width: 100%;
+		left: -100%;
+		z-index: 1000;
+
+	 }
+
+	 .navegacion.active{ 
+		width: 100%;
+		left: 0;
+	 }
+
+	 
+}
+

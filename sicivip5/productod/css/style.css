@@ -1,0 +1,758 @@
+
+/*fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+/*/FUNETES*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*{
+
+	margin: 0;
+	padding: 0;
+
+}
+
+
+body {
+
+	background:rgba(0,0,0,0.6) url(../img/m4.jpg); 
+	background-size: cover;
+	background-blend-mode: darken;
+
+}
+body{
+	margin: 0;
+}
+
+/*---------------------------------------------------*/
+/*------------------tarjetas -------------------------*/
+/*----------------------------------------------------*/
+.personas{
+
+margin: 48px 0;
+
+
+} 
+
+
+
+.contenedor {
+	width: 100%;
+	margin: auto;
+
+   
+}
+
+
+.persona--columna{
+
+    margin: 5px;
+   
+    overflow: hidden;
+     position: relative;
+     
+}
+
+.persona--columna:hover .caja{
+
+transform: translateY(0%);
+
+}
+
+.persona--columna:hover .pr{
+
+	transform: scale(1.15);
+}
+
+
+.pr{
+
+  height: 400px;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.personas .contenedor {
+
+	display: grid;
+	
+}
+
+
+@media(min-width: 1024px){
+
+	.personas .contenedor {
+
+		grid-template-columns: repeat(4, 25%);
+	}
+	.contenedor{
+		width: 1024px;
+
+	}
+}
+
+
+
+@media(min-width: 1200px){
+
+	.contenedor{
+		width: 1200px;
+	}
+}
+
+
+.texto {
+
+text-align:center; 
+	padding: 10px 20px;
+	color: white;
+	text-align: justify;
+	
+	
+}
+h1{
+letter-spacing: 1px;
+font-family: 'Play', sans-serif;
+font-size: 25px;
+
+}
+p{
+font-family: 'Play', sans-serif;
+font-size: 16px;
+
+}
+
+.boton {
+
+	text-align:center; 
+	padding: 10px 10px;
+
+}
+
+
+
+.caja{
+
+	background:rgba(0,0,0,0.6);
+	position: absolute;
+	bottom: 0;
+	transform: translateY(100%);
+	transition: all 0.5s ease-out;
+
+}
+
+.caja .boton button{
+   width: 40%;
+   outline: none;
+   padding: 6px 0;
+   font-size: 17px;
+   font-weight: 500;
+   border-radius: 4px;
+   border: 2px solid transparent;
+   cursor: pointer;
+
+
+}
+
+.boton button:first-child{
+
+color:black;
+
+background-color: rgba(255, 255, 255, 0.9);
+margin-right: 10px;
+font-family: 'Play', sans-serif;
+}
+
+.boton button:last-child{
+
+color: white;
+background:rgba(0,0,0,0.8); ;
+margin-right:10px;
+font-family: 'Play', sans-serif;
+}
+
+
+
+.boton button a{
+
+	color:black;
+	text-decoration: none;
+	list-style: none;
+}
+
+
+.boton .cv{
+
+	color:white;
+	text-decoration: none;
+	list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+/*transparencia de la caja */
+background: rgba(0,0,0,0.5);
+/*altura por defecto*/
+height: auto;
+/*ancho de la caja */
+width: 100%;
+/*posicion fija*/
+position: relative;
+/* ningun desplazamiento superior*/
+top: 0;
+/* ningun desplazamiento ala izquierda*/
+left: 0;
+/*elementos unos al lado de los otros */
+display: flex;
+/*distribucion entre el espacio del nombre y los iconos del menu */
+justify-content: space-between;
+/*espacio de los lados */
+padding: 0 5% 0 px;
+/* control de las cajas ...calcula las dimensiones de los elmentos, incluye elpadding y border*/
+box-sizing: border-box;
+/*altura*/
+height: 60px;
+/*transicion de cursor*/
+transition: 0.5s;
+text-decoration: none;
+font-family: 'Chakra Petch', sans-serif;
+
+
+
+}
+
+
+
+.sicivp img{
+
+    width: 70px;
+     
+}
+
+
+
+
+/*---------------------------*/
+/*----Barra de navegacion----*/
+/*---------------------------*/
+
+.menu{
+     
+     /*alinear elementos unos al lado de los otros*/
+	display: flex;
+	/*distribuye el espacio y se centra */
+	justify-content: center;
+	/*alinaer elemnto al centro */
+	align-items: center;
+	/*quitar viñetas */
+	list-style: none; 
+	
+
+}
+
+.menu ul li{
+
+	display: inline-block;
+	position: relative;
+	margin: 0 20px;
+} 
+
+
+
+.menu ul li a{
+
+	text-decoration: none;
+	color: white;
+	padding: 0 5px;
+}
+
+ .menu li{
+   /*margen de los cuatro lados */
+   margin:0 16px;
+   /*grosor de la fuente */
+   font-weight: 500;
+   /*la manito del cursor*/
+   cursor: pointer;
+  /*transicion de cursor*/
+   transition: 0.5s;
+   /*color de los elemntos */
+   color: white;
+   /*espacio entre cada elemento ala izquierda */
+   margin-left: 20px;
+   font-family: font-family: 'Rajdhani', sans-serif;
+   
+}
+
+
+.menu li a {
+
+   
+	text-decoration: none;
+	color: white;
+}
+
+
+/*---------------------*/
+/*efecto hover en linea*/
+.menu .ññ::before{
+
+	content: "";
+	position: absolute;
+	background:black;
+	height: 3px;
+	width: 0;
+	left: 0;
+	top: 100%;
+	margin: 7px 0;
+	transition:all 0.5s linear;
+}
+
+
+.menu .ññ::after{
+
+	content: "";
+	position: absolute;
+	background:black;
+	height: 3px;
+	width: 0;
+	right: 0;
+	top: 100%;
+	margin: 7px 0;
+	transition:all 0.5s linear;
+}
+
+.menu .ññ:hover::before{
+ width: 100%;
+ background: #e6ccb2;
+}
+
+.menu .ññ:hover::after{
+ width: 100%;
+ background: #e6ccb2;
+}
+
+
+/*efecto hover en linea*/
+/*---------------------*/
+ 
+ /*--------------------------------*/
+ /*boton de registro*/
+
+ .regi{
+       
+    /*fondo del boton*/
+   background-color: transparent;
+	/*espacio de los lados */
+   padding: 10px 24px;
+   border: 2px solid #e6ccb2;
+   /*redondes del boton*/
+   border-radius: 38px;
+   /*color del a palabra */
+   color: white;
+   /*grosor de la fuente */
+   font-weight: 600%;
+   /*la manito del cursor*/
+   cursor:pointer;
+   transition: 0.5s;
+}
+ /*efecto hover del boton registro*/
+.regi:hover{
+  
+  background-color:#e6ccb2 ;
+  box-shadow: 0 0 2px #e6ccb2, 0 0 5px  #e6ccb2, 0 0 5px;
+  color:black;
+}
+
+
+/*pie de pagina */
+
+
+footer {
+
+    background :#212529;
+	height: auto;
+	width: 100%;
+	font-family: serif;
+	color: white;
+	margin: 0;
+	
+
+}
+
+section{
+
+	display: flex;
+	justify-content: center;
+}
+
+article{
+
+	margin: 80px;
+}
+
+article h3{
+   
+
+
+   font-size:1.8rem;
+   font-weight: 400;
+   text-transform: capitalize;
+   line-height: 3rem;
+   font-family: 'Recursive', sans-serif;
+ }
+
+ article p{
+   max-width: 500px;
+   margin : 23px auto;
+   line-height: 28px;
+   font-size: 14px;
+ }
+
+
+/*---------------------------*/
+/*---------pie de pagina-----*/
+/*---------------------------*/
+
+
+
+
+
+ .redes{
+
+ 	list-style: none;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	margin: 30px 0 30px 0;
+
+ }
+ 
+
+ .redes li {
+ 	margin: 0 10px;
+ }
+
+
+.redes a{
+text-decoration: none;
+color: white;
+
+}
+
+.redes a i{
+
+font-size: 2rem;
+
+}
+
+
+.redes a:hover i{
+
+color :#0077b6;
+}
+
+.foi{
+
+	background: black;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.foi p{
+   font-size: 14px;
+   /*espacio entre palabras*/
+   word-spacing: 2px;
+   text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+ /*-------------------------*/
+ /*--------buscador----------*/
+ /*---------------------------*/
+
+
+ .buscar{
+
+
+     
+	position: relative;
+	/*arriba y abajo y de izq a dere*/
+	padding: 5px;
+	left: 500px;
+
+	  
+}
+
+.buscar input{
+    
+    background: #f0efeb;
+    /*ancho*/
+	width: 240px;
+	/*altura*/
+	height: 40px;
+	/*arriba y abajo y de izq a dere*/
+	padding: 0 20px;
+	/*Tamaño de fuente*/
+	font-size: 18px;
+    color: white;
+    /*quitar borde*/
+    border-style: none;
+    /*borde inferior*/
+    border-bottom: 2px solid #e6ccb2;
+}
+
+
+/*-------------------------*/
+ /*--------buscador----------*/
+ /*---------------------------*/
+
+
+.ico button {
+
+	background: #f0efeb;
+	/*quitar borde*/
+	border-style: none;
+	color: #6c757d;
+	/*posicion determinada*/
+	position: relative;
+	/*]izquierda*/
+	left: 510px;
+	/*linae derecha del icono */
+	border-left: 2px solid black;
+	/*distancia  y altura de la linea*/
+	padding: 10px 15px;
+}
+
+
+.ico button i {
+     
+     /*tamaño de fuente*/
+	font-size: 20px;
+}
+
+.ico button :hover{
+	/*color del efecto*/
+ color: black ;
+
+ 
+}
+
+.ico button a i {
+
+	border-style: none;
+	color: #6c757d;
+
+}
+
+
+
+
+
+
+/*-----------------------------*/
+/*----------caja---------------*/
+/*-----------------------------*/
+
+.bus{
+
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 255, 255, 0.9);
+	height: 60px;
+	width: 100%;
+	position: relative;
+	top:0;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	
+
+	
+}
+
+.bus ul li{
+
+	display: inline-block;
+	position: relative;
+	margin: 0 20px;
+	left: 370px;
+} 
+
+/*letra*/
+
+.bus ul li a{
+
+	text-decoration: none;
+	color: #6c757d;
+	padding: 0 5px;
+}
+
+ .bus li{
+   /*margen de los cuatro lados */
+   margin:0 16px;
+   /*grosor de la fuente */
+   font-weight: 800;
+   /*la manito del cursor*/
+   cursor: pointer;
+  /*transicion de cursor*/
+   transition: 0.5s;
+   /*color de los elemntos */
+   color: green;
+   /*espacio entre cada elemento ala izquierda */
+   margin-left: 20px;
+   font-family: 'Exo 2', sans-serif;
+   
+}
+
+.bus h1{
+
+
+    position: relative;
+	left: 20px;
+	font-family: 'Poiret One', cursive;
+	font-size: 25px;
+	color: #6c757d;
+}
+
+
+
+/*---------------------*/
+/*efecto hover en linea*/
+.bus a::before{
+
+	content: "";
+	position: absolute;
+	background:black;
+	height: 3px;
+	width: 0;
+	left: 0;
+	top: 100%;
+	margin: 7px 0;
+	transition:all 0.5s linear;
+}
+
+
+.bus a::after{
+
+	content: "";
+	position: absolute;
+	background:black;
+	height: 3px;
+	width: 0;
+	right: 0;
+	top: 100%;
+	margin: 7px 0;
+	transition:all 0.5s linear;
+}
+
+.bus .qw:hover::before{
+ width: 100%;
+ background: #6c757d;
+}
+
+.bus .qw:hover::after{
+ width: 100%;
+ background: #6c757d;
+}
+
+
+/*-------------------------*/
+ /*--------buscador----------*/
+ /*---------------------------*/
+
+
+ .buscar{
+
+
+     
+	position: relative;
+	/*arriba y abajo y de izq a dere*/
+	padding: 5px;
+	left: 500px;
+
+
+	  
+}
+
+.buscar input{
+    
+    background: transparent;
+    /*ancho*/
+	width: 240px;
+	/*altura*/
+	height: 40px;
+	/*arriba y abajo y de izq a dere*/
+	padding: 0 20px;
+	/*Tamaño de fuente*/
+	font-size: 18px;
+    color: white;
+    /*quitar borde*/
+    border-style: none;
+    /*borde inferior*/
+    border-bottom: 2px solid #6c757d;
+}
+
+
+
+/*-------------------------*/
+ /*--------buscador----------*/
+ /*---------------------------*/
+
+
+.ico button {
+
+	background: transparent;
+	/*quitar borde*/
+	border-style: none;
+	color: #6c757d;
+	/*posicion determinada*/
+	position: relative;
+	/*]izquierda*/
+	left: 510px;
+	/*linae derecha del icono */
+	border-left: 2px solid transparent;
+	/*distancia  y altura de la linea*/
+	padding: 10px 15px;
+}
+
+
+.ico button i {
+     
+     /*tamaño de fuente*/
+	font-size: 20px;
+}
+
+.ico button :hover{
+	/*color del efecto*/
+ color: black ;
+
+ 
+}
+
+

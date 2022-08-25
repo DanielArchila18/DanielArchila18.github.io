@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<!-- enlace de iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<!--  enlaces Normalize -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- Fuente de google fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!--estilos css  -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<!-- class para acceder css....  id para acceder js -->
+		<!-- const formulario = document.getElementById('formulario') para acceder a este formulario -->
+		<form action="" class="formulario" id="formulario">
+
+
+			<div class="titulo">COMPRA DE MERCANCIA</div>
+
+			<!-- Nombre de la Empresa -->
+			<div class="formulario__grupo  " id="grupo__empresa">
+				<label for="empresa" class="formulario__label">Nombre de la Empresa</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="empresa" id="empresa" placeholder="Empresa">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>         
+				<p class="formulario__input-error">El campo Empresa tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion abajo.</p>	
+			</div>
+
+
+				<!-- Nombre del representante -->
+			<div class="formulario__grupo" id="grupo__representante">
+				<label for="representante" class="formulario__label">Nombre del representante </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="representante" id="representante" placeholder="Representante">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Representante no puede contener numeros y simbolos </p>	
+			</div>
+
+
+				<!-- ID_pedido -->
+			<div class="formulario__grupo" id="grupo__pedido">
+				<label for="pedido" class="formulario__label">Id_Pedido </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="pedido" id="pedido" placeholder="p1102394">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Id_pedido solo contiene numeros de 2 a 6 digitos</p>	
+			</div>
+
+
+				<!-- Fecha -->
+			<div class="formulario__grupo" id="grupo__fecha">
+				<label for="fecha" class="formulario__label">Fecha </label>
+				<div class="formulario__grupo-input">
+					<input type="date" class="formulario__input" name="fecha" id="fecha" placeholder="18/03/2022">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Fecha es obligatorio</p>	
+			</div>
+
+
+				<!-- Categoria -->
+			<div class="formulario__grupo" id="grupo__categoria">
+				<label for="categoria" class="formulario__label">Categoria </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="categoria" id="categoria" placeholder="Categoriaghd">
+					   <option value="1">Seleccione</option>
+					   <option value="2">ropa</option>
+					   <option value="3">pantalones</option>
+					   <option value="4">Zapatos</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Categoria es obligatorio</p>	
+			</div>
+
+
+				<!-- Tipo de prenda-->
+			<div class="formulario__grupo" id="grupo__prenda">
+				<label for="prenda" class="formulario__label">Tipo de Prenda </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="prenda" id="prenda" >
+					    <option value="1">Seleccione</option>
+					   <option value="1">ropa</option>
+					   <option value="1">pantalones</option>
+					   <option value="1">Zapatos</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+			<!-- Cantidad -->
+			<div class="formulario__grupo" id="grupo__cantidad">
+				<label for="cantidad" class="formulario__label">Cantidad</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="cantidad" id="cantidad" placeholder="1264">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Cantidad solo contiene numeros.</p>	
+			</div>
+
+
+				<!-- Marca -->
+			<div class="formulario__grupo" id="grupo__marca">
+				<label for="marca" class="formulario__label">Marca </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="marca" id="marca" placeholder="adidas">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Marca solo puede contener letras, numeros y guion abajo.</p>	
+			</div>
+
+
+				<!-- Color -->
+			<div class="formulario__grupo " id="grupo__color">
+				<label for="color" class="formulario__label">Color </label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="color" id="color" placeholder="Rojo">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Color solo puede contener letras.</p>	
+			</div>
+
+
+
+				<!-- Talla -->
+			<div class="formulario__grupo" id="grupo__talla">
+				<label for="talla" class="formulario__label">Talla </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="talla" id="talla" placeholder="s"> 
+					   <option value="1">Seleccione</option>
+					   <option value="1">xs</option>
+					   <option value="1">l</option>
+					   <option value="1">M</option>
+					   <option value="1">s</option>
+					   <option value="1">XM</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Talla es obligatorio</p>	
+			</div>
+
+
+
+			<!------------------------------mensaje de error y boton--------------------------------->
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: </b> Por favor complete el formulario correctamente </p>
+
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" >
+				<button type="submit" class="formulario__btn">ENVIAR</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado-exitosamente!</p>
+
+			</div>
+
+
+
+
+		</form>
+	</main>
+
+
+    <!--Archivo de formulario js  -->
+	<script src="js/formulario.js"></script>
+	
+</body>
+</html>

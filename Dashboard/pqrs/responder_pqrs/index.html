@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<!-- enlace de iconos fontawesome -->
+	<script src="https://kit.fontawesome.com/e04771906c.js" crossorigin="anonymous"></script>
+	<!--  enlaces Normalize -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<!-- Fuente de google fonts  -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!--estilos css  -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<!-- class para acceder css....  id para acceder js -->
+		<!-- const formulario = document.getElementById('formulario') para acceder a este formulario -->
+		<form action="" class="formulario" id="formulario">
+
+			<div class="titulo">RESPUESTA PQRS</div>
+
+
+            <!-- Tipo de solicitud-->
+			<div class="formulario__grupo" id="grupo__solicitud">
+				<label for="solicitud" class="formulario__label">Remitir a departamento </label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="solicitud" id="solicitud" >
+					    <option value="1">Seleccione tipo de solicitud</option>
+					   <option value="1">Ventas</option>
+					   <option value="1">Facturación</option>
+					   <option value="1">Ninguno</option>
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+
+            <!-- Tipo de solicitud-->
+			<div class="formulario__grupo" id="grupo__solicitud">
+				<label for="solicitud" class="formulario__label">¿Cerrar solicitud?</label>
+
+				<div class="formulario__grupo-input">
+					
+					<select class="formulario__input" name="solicitud" id="solicitud" >
+					    <option value="1">Seleccione tipo de solicitud</option>
+					   <option value="1">Si</option>
+					   <option value="1">No</option>
+					 
+				    </select>	
+
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+				<p class="formulario__input-error">El campo Tipo de Prenda es obligatorio</p>	
+			</div>
+
+
+			<p class="mensaje">Respuesta a la queja, pregunta o reclamo.</p>
+             
+
+
+			<!-- Descripcion-->
+
+			<div class="formulario__comentario  " id="grupo__descripcion">
+			
+					<textarea name="descripcion" id="descripcion" class="formulario__descripcion" rows="10" cols="40" placeholder="Escribe aquí tu respuesta "></textarea>
+				       
+				<p class="formulario__input-error">El campo debe tener la descripcion de la situacion.</p>	
+			</div>
+
+             
+
+             <!-- producto -->
+
+             <p class="adjunta-fac">Adjunte novedad, respuesta </p> 
+		      <input type="file" class="añadir" id="factura" >
+		      <p class="formulario__input-error">Debe adjuntar la factura.</p>	
+
+
+
+
+             
+             
+
+			<!------------------------------mensaje de error y boton--------------------------------->
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: </b> Por favor complete el formulario correctamente </p>
+
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" >
+				<button type="submit" class="formulario__btn">ENVIAR RESPUESTA</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado-exitosamente!</p>
+
+			</div>
+
+
+
+
+		</form>
+	</main>
+
+
+    <!--Archivo de formulario js  -->
+	<script src="js/formulario.js"></script>
+	
+</body>
+</html>
